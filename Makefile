@@ -1,8 +1,8 @@
-all: fibonacci
+all: complex
 
 run:
-	echo "Running:fibonacci"
-	./fibonacci
+	echo "Running:complex"
+	./complex
 
 clean:
-	rm -f fibonacci fibonacci.o
+	rm -f complex complex.o
