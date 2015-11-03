@@ -1,6 +1,5 @@
 #include <stdio.h>
-
-
+/* structure to store the complex numbers */
 typedef struct complex {
  float x;
  float y;
@@ -20,7 +19,7 @@ int main(void)
 * Function: int main(void)
 * Input : none
 * Output : Returns 0 on success
-* Procedure: Prints "Hello, World!" and a new line to standard output then exits.
+* Procedure: Performs operations on complex numbers and prints results.
 ************************************************************************************/
 test();
 return 0;
@@ -58,9 +57,21 @@ a.x = 2.0;
 a.y = 3.0;
 b.x = 4;
 b.y = 5;
+printf("Enter a and b where a + ib is the first complex number.\n");
+printf("a = ");
+scanf("%f", &a.x);
+printf("b = ");
+scanf("%f", &a.y);
+printf("Enter c and d where c + id is the second complex number.\n");
+printf("c = ");
+scanf("%f", &b.x);
+printf("d = ");
+scanf("%f", &b.y);
+printf (" The complex numbers entered are :%.1f %+.1f and %.1f %+.1fi\n", a.x,a.y,b.x,b.y);
 printf ("The multiplication of complex numbers are :%.1f %+.1fi\n", mult2(a,b).x, mult2(a,b).y);
 printf ("The square of complex number is :%.1f %+.1fi\n", square(a).x, square(a).y);
 printf ("The addition of complex numbers are :%.1f %+.1fi\n", add2(a,b).x, add2(a,b).y);
 printf ("The juliamap of complex numbers are :%.1f %+.1fi\n", juliamap(a,b).x, juliamap(a,b).y);
 complex_print(a);
+complex_print(b);
 }
