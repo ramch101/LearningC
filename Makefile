@@ -1,8 +1,8 @@
-all: complex
+all: test_complex
 
-run:
-	echo "Running:complex"
-	./complex
+run: all
+	echo "Running:test_complex"
+	./test_complex
 
 clean:
-	rm -f complex complex.o
+	rm -f test_complex test_complex.o
