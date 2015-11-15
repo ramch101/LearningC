@@ -1,6 +1,11 @@
+/* If we define the fibonacci number with a int datatype we get negative values
+ * after the max length of 32 bits. If we need to overcome the issue we define with a unsigned long long int data type to resolve the issue
+ * */
+
 # include <stdio.h>
 int main ( void) {
-int n, first = 0, second = 1, next, c;
+unsigned long long int n, first = 0, second = 1, next, c;
+    
  
    printf("Enter the number of terms\n");
    scanf("%d",&n);
@@ -17,7 +22,7 @@ int n, first = 0, second = 1, next, c;
          first = second;
          second = next;
       }
-      printf("%d\n",next);
+      printf("%llu\n",next);
    }
  
    return 0;
