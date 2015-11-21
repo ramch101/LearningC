@@ -13,8 +13,9 @@ int main() {
   mat2(1,2) = -15.0;
 
   // Define a third matrix as the product of the first two
-  //Matrix<long double> mat3 = mat1 * mat2;
-  Matrix<long double> mat3 = mat1 -mat2 ;
+  //  Matrix<long double> mat3 = mat1 * mat2;
+   Matrix<long double> mat3 = mat1 -mat2 ;
+  save(mat3, "test.csv");
 
   // Print out the third matrix as a text array
   for (int i=0; i<mat3.get_rows(); i++) {

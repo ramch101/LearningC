@@ -190,11 +190,26 @@ Matrix<T> Matrix<T>::operator-( Matrix<T>& rhs) {
   // Create new matrix to store result, initialize to zero
   Matrix result(rows, cols, 0.0);
   
-  //result = (*this) * ((T)(-1)) ;
-  //result = (*this) + *rhs ;
   result = (*this) + rhs * (T)(-1) ;
 
   return result;
+}
+// Method to Stream output to a file
+template<typename T>
+void save(const Matrix<T> rhs, std::string filename) { 
+    // file handle
+    std::ofstream output;
+    // open a file
+    output.open(filename.c_str());
+    // write to file as a stream
+    for (unsigned int i=0; i<rhs.get_rows(); i++) {
+       for (unsigned int j=0; j<rhs.get_cols(); j++) {
+           output << rhs(i,j) << ", ";
+       }
+      output << std::endl;
+    }
+    
+    output.close();
 }
 
 #endif

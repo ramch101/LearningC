@@ -3,6 +3,15 @@
 
 // Most useful standard library implementation of a vector
 #include <vector>
+// iostream: contains basic io streaming operations (cin, cout, etc.)
+#include <iostream>
+// true string type
+#include <string>
+// convert strings to streams with stringstream
+#include <sstream>
+// write files easily as streams
+#include <fstream>
+
 
 // A template allows a type T to be passed into a class as a
 // parameter, so a single class definition can use different types 
@@ -51,7 +60,9 @@ template <typename T> class Matrix {
     // Accessors for row and column sizes
     unsigned int get_rows() const;
     unsigned int get_cols() const;
-
+    
+   // Method to stream output to a file
+      void save(const Matrix<T>& rhs, std::string filename);
 };
 
 // C++ requires seeing both the source code and declarations simultaneously
